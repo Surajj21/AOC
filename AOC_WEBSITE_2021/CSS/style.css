@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+#main-content{
+    box-sizing: border-box;
+}
+/* navbar  */
+
+.border-box{
+    box-sizing: border-box !important;
+}
+
+
+
+
+
+
+/*nav search placeholder */
+.form-control::placeholder { color: white;} /* Chrome, Firefox, Opera*/
+:-ms-input-placeholder.form-control { color: white; }  /* Internet Explorer*/
+.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge*/
+
+/* subscribe placeholder  */
+.form-control::placeholder { color: white;} /* Chrome, Firefox, Opera*/
+:-ms-input-placeholder.form-control { color: white; }  /* Internet Explorer*/
+.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge*/
+

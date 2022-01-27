@@ -1,0 +1,38 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(207, 207, 207); */
+}
+.serv_block{
+    height:170px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+    
+}
+.show_form{
+    overflow: hidden;
+    display: none;
+    box-sizing: border-box;
+    
+}
+
+/* ------------------------------------------------------mobile view.........................................  */
+@media (min-width: 300px) and (max-width: 767.98px) {
+    .aoc-brand{
+        font-size: 16px;
+    }
+    .serv_block{
+    height:100px;
+    width: 40%;
+    box-sizing: border-box;
+}  
+}

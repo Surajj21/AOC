@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aadhar from</title>
+    <link rel="icon" href="images/maillogo.png" type="image/gif" sizes="16x16">
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- bootstrap 5  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- fontawsome  -->
+    <link rel="stylesheet" href="../fontawsome/css/font-awesome.min.css">
+    <!-- mainstyle  -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        input[type="file"] {
+            display: none;
+        }
+        .custom-file-upload {
+            border: 2px solid rgb(121, 121, 121);
+            border-radius: 8px;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <section>
+        <div class="container-fluid border">
+            <div class="row">
+                <form action="#" method="#" class="mx-auto p-5">
+                    <div class="p-1" style="border: 5px solid black ;">
+                        <div class="internal p-5" style="border: 1px solid black; ">
+                            <div class="text-center mb-5">
+                                <h3>APPLICANT DETAILS</h3>
+                            </div>
+                            <div class="form row my-3">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="aadhar" class="font-weight-bolder mx-2">AADHAR NO :</label>
+                                    <input type="number" class="form-control" id="aadhar" style="" aria-describedby="emailHelp" placeholder=" 0000 0000 0000 ">
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="mobile" class="font-weight-bolder mx-2">MOBILE NUMBER :</label>
+                                    <input type="number" class="form-control " id="mobile" style="" aria-describedby="emailHelp" placeholder=" 1234567890 ">
+                                </div>   
+                            </div>
+
+                            <div class="form row my-3">
+                                <div class="">
+                                <label for="name" class="font-weight-bolder mx-2">FULL NAME : &nbsp;</label>
+                                <div class="form-inline col-md-12 row p-0 mx-auto">
+                                    <input type="text" class="col-4 rounded border p-2" id="name" placeholder="first name ">
+                                    <input type="text" class="col-4 rounded border p-2" id="name" placeholder="middle name">
+                                    <input type="text" class="col-4 rounded border p-2" id="name" placeholder="last name">
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="form row my-3">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="dob" class="font-weight-bolder mx-2">SELECT DOB :&nbsp;</label>
+                                    <input type="date" class="form-control" id="dob">
+                               </div>
+                               <div class="col-md-6 col-sm-12 row">
+                                <label for="dob" class="font-weight-bolder mx-2">GENDER :&nbsp;</label><br>
+                                <div class="col-md-4"><input type="radio" class="mx-1" id="gender" name="gen"><label>Male</label></div>
+                                <div class="col-md-4"><input type="radio" class="mx-1" id="gender" name="gen"><label>Female</label></div>
+                                <div class="col-md-4"><input type="radio" class="mx-1" id="gender" name="gen"><label>Other</label></div>
+                                
+                                
+                               </div>
+                            </div>
+                            
+                            <div class="form my-3 row">
+                                <div class="col-md-12">
+                                    <label for="check" class="font-weight-bolder mx-2">CORRECTION IN :</label>
+                                    <div class="col-md-12 row form-inline mx-auto bg-danger p-0">
+                                        <a href="#" class=" bg-success col-3 form-inline"><input type="checkbox" class="mr-3" onclick="show_name()" id="name_corr_check"><label for="n  ame_corr_check">NAME</label></a>
+                                        <a href="#" class=" bg-success col-3 form-inline"><input type="checkbox" class="mr-3" onclick="show_dob()" id="dob_corr_check"><label for="dob  _corr_check">DATE OF BIRTH</label></a>
+                                        <a href="#" class=" bg-success col-3 form-inline"><input type="checkbox" class="mr-3" onclick="show_hide()" id="address_corr_check"><label for  ="address_corr_check">ADDRESS</label></a>
+                                        <a href="#" class=" bg-success col-3 form-inline"><input type="checkbox" class="mr-3" onclick="show_hide()" id="gender_corr_check"><label for=  "gender_corr_check">GENDER</label></a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                          
+
+                            <!-- <div class="choose_file">
+                                <label class="font-weight-bolder mx-2">UPLOAD SUPPORTING DOCUMENT :</label>
+                                <label for="file-upload" class="custom-file-upload">
+                                    Choose File
+                                </label>
+                                <input id="file-upload" type="file"/>
+                            </div> -->
+
+
+<!-- --------------------------------------------------CORRECT FORM DETAILS----------------------------------------- -->
+
+
+                            <!-- NAME CHANGE CORRECTION FORM  -->
+                            <div class="form-inline my-3 show_form mr-auto" id="name_corr">
+                                <label for="name" class="font-weight-bolder mr-auto">FULL NAME:</label>
+                                <input type="text" class="form-control w-auto border-0" id="name_corr_input" style="border-bottom: 2px solid !important;" placeholder="first name ">
+                                <input type="text" class="form-control w-auto border-0" id="name_corr_input" style="border-bottom: 2px solid !important;" placeholder="middle name">
+                                <input type="text" class="form-control w-auto border-0" id="name_corr_input" style="border-bottom: 2px solid !important;" placeholder="last name">
+                                <!-- </div> -->
+                                <br>
+                                <!-- <input class="form-control border border-danger" type="file" id="formFile"> -->
+
+                                <!-- <label class="font-weight-bolder mx-2">UPLOAD SUPPORTING DOCUMENT :</label>
+                                <label for="file-upload" class="custom-file-upload">
+                                    Choose File
+                                </label>
+                                <input id="file-upload" type="file"/> -->
+                                <!-- <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile02">
+                                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                  </div> -->
+                            </div><br>
+
+                            <!-- DOB CHANE CORRECTION FORM  -->
+                            <div class="form-inline my-3 show_form mr-auto" id="dob_corr">
+                                <label for="dob" class="font-weight-bolder mx-2">SELECT DOB :&nbsp;</label>
+                                <input type="date" class="form-control mr-auto w-auto border-0" id="dob_corr_input" style="border-bottom: 2px solid !important;" >
+                            </div><br>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- bootstrap 5  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="name_jave.js"></script>
+    <script type="text/javascript" src="dob_java.js"></script>
+
+
+</body>
+</html>
